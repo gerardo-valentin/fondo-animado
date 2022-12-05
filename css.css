@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100VH;
+    background-color: #0C192C;
+
+}
+
+.CONTENEDOR{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.Burbuja{
+    position: relative;
+    display: flex;
+}
+
+.Burbuja span{
+    position: relative;
+    width: 29px;
+    height: 29px;
+    /*color*/background: #9796f075;
+    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);
+    /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, #fbc7d4, #9796f0);
+    /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px  #fbc7d4, #9796f0,    0 0  50px  #fbc7d4, #9796f0,    0 0 100px  #fbc7d4, #9796f0;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(160s/ var(--i));
+}
+
+
+
+
+.Burbuja span:nth-child(even){
+
+    background: #83a4d4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+box-shadow: 0 0 0 10px#83a4d4, #b6fbff, 0 0 50px #83a4d4, #b6fbff, 0 0 100px #83a4d4, #b6fbff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================== AHORA QUE TENEMOS EL TAMAÑO, LOS COLORES LE DAREMOS MOVIMIENTO A LO DEMAS ============================ */
+
+@keyframes animate{
+    0%{
+    /*estoharaqueeltextosemuevadesdeladerechahacialaizquierda*//*translate: 350px;
+    /*con lo siguiente le estamos diciendo que se mueva desde abajo hacia arriba ya que estamos declarando que se mueva desde el vector (y)*/
+    
+    transform: translateY(100VH) scale(0);
+    }
+    
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
